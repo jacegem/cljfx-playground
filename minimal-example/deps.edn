@@ -1,0 +1,12 @@
+{:paths ["src", "resources"]
+ :deps  {cljfx/cljfx {:mvn/version "1.7.19"}
+         org.clojure/core.cache {:mvn/version "1.0.225"}
+         clj-http/clj-http {:mvn/version "3.12.3"}
+         integrant/integrant {:mvn/version "0.8.0"}
+         integrant/repl {:mvn/version "0.3.2"}}
+
+ :aliases
+ {:reveal-nrepl-middleware
+  {:extra-deps {vlaaad/reveal {:mvn/version "1.3.194"}}
+   :main-opts  ["-m" "nrepl.cmdline"
+                "--middleware" "[vlaaad.reveal.nrepl/middleware,cider.nrepl/cider-middleware]"]}}}
